@@ -1,0 +1,433 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<script src="jquery-3.4.1.js"></script>
+<script src="jsPDF-1.3.2/dist/jspdf.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>試作機（ワード版）</title>
+    <script>
+function Export2Doc(element, filename = ''){
+    var preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML To Doc</title></head><body>";
+    var postHtml = "</body></html>";
+    var html = preHtml+document.getElementById(element).innerHTML+postHtml;
+
+    var blob = new Blob(['\ufeff', html], {
+        type: 'application/msword'
+    });
+    
+    // Specify link url
+    var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html);
+    
+    // Specify file name
+    filename = filename?filename+'.doc':'document.doc';
+    
+    // Create download link element
+    var downloadLink = document.createElement("a");
+
+    document.body.appendChild(downloadLink);
+    
+    if(navigator.msSaveOrOpenBlob ){
+        navigator.msSaveOrOpenBlob(blob, filename);
+    }else{
+        // Create a link to the file
+        downloadLink.href = url;
+        
+        // Setting the file name
+        downloadLink.download = filename;
+        
+        //triggering the function
+        downloadLink.click();
+    }
+    
+    document.body.removeChild(downloadLink);
+}
+    </script>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"\@ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century",serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"ヘッダー \(文字\)";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"Century",serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"フッター \(文字\)";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"Century",serif;}
+p.MsoClosing, li.MsoClosing, div.MsoClosing
+	{mso-style-link:"結語 \(文字\)";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:right;
+	font-size:12.0pt;
+	font-family:"ＭＳ ゴシック";}
+span.a
+	{mso-style-name:"ヘッダー \(文字\)";
+	mso-style-link:ヘッダー;}
+span.a0
+	{mso-style-name:"結語 \(文字\)";
+	mso-style-link:結語;
+	font-family:"ＭＳ ゴシック";}
+span.a1
+	{mso-style-name:"フッター \(文字\)";
+	mso-style-link:フッター;}
+.MsoChpDefault
+	{font-family:"Century",serif;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 54.0pt 72.0pt 54.0pt;
+	layout-grid:18.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+</head>
+<body lang=JA style='text-justify-trim:punctuation'>
+<div id="navbar"><span>適格機関投資家の全てが投資事業有限責任組合である場合に提出する書面（ワード版試作機）</span></div>
+
+
+
+
+<br><br><br><br><br><br><br><br><br>
+
+
+<script>
+function change(ctrl){
+    var g = document.getElementById('guest');   
+    g.value = ctrl.value;
+}
+
+function change1(ctrl1){
+    var g1 = document.getElementById('guest1');   
+    g1.value = ctrl1.value;
+}
+
+function change2(ctrl2){
+    var g2 = document.getElementById('guest2');   
+    g2.value = ctrl2.value;
+}
+function change3(ctrl3){
+    var g3 = document.getElementById('guest3');   
+    g3.value = ctrl3.value;
+}
+
+function change4(ctrl4){
+    var g4 = document.getElementById('guest4');   
+    g4.value = ctrl4.value;
+}
+
+function change5(ctrl5){
+    var g5 = document.getElementById('guest5');   
+    g5.value = ctrl5.value;
+}function change6(ctrl6){
+    var g6 = document.getElementById('guest6');   
+    g6.value = ctrl6.value;
+}
+
+function change7(ctrl7){
+    var g7 = document.getElementById('guest7');   
+    g7.value = ctrl7.value;
+}
+
+
+
+
+
+</script>
+<form>
+住所入力<br>
+<input type="text" name="g_name" placeholder="住所" />
+<input type="button" value="入力" onclick="change(g_name)"/>
+<br>
+商号入力<br>
+<input type="text" name="g_name1" placeholder="商号" />
+<input type="button" value="入力" onclick="change1(g_name1)"/>
+<br>
+氏名入力<br>
+<input type="text" name="g_name2" placeholder="氏名" />
+<input type="button" value="入力" onclick="change2(g_name2)"/>
+
+<br>
+<br>
+<br>
+
+出資対象事業持分の名称<br>
+<input type="text" name="g_name3" placeholder="名称" />
+<input type="button" value="入力" onclick="change3(g_name3)"/>
+<br>
+適格機関投資家である投資事業有限責任組合の名称<br>
+<input type="text" name="g_name4" placeholder="名称" />
+<input type="button" value="入力" onclick="change4(g_name4)"/>
+
+<br>
+<br>
+<br>
+
+投資事業有限責任組合契約に基づき当該投資事業有限責任組合契約の相手方のために運用を行う金銭その他の財産の総額
+（A）<br><input type="text" name="g_name5" placeholder="円" />
+<input type="button" value="入力" onclick="change5(g_name5)"/>
+
+<br>
+
+投資事業有限責任組合が行う借入金の額（B）<br>
+<input type="text" name="g_name6" placeholder="円" />
+<input type="button" value="入力" onclick="change6(g_name6)"/>
+
+<br>
+
+A-B<br>
+<input type="text" name="g_name7" placeholder="円" />
+<input type="button" value="入力" onclick="change7(g_name7)"/>
+
+<br><br><br><br><br><br>
+
+
+<br><br><br><br><br><br>
+
+
+
+<button onclick="Export2Doc('exportContent');">ワード出力</button>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+<h>-----------------------------------以下、出力結果例-------------------------------------</h>
+
+
+<div id="exportContent" class=WordSection1 style='layout-grid:18.0pt'>
+
+<p class=MsoNormal align=right style='text-align:right'><span lang=EN-US
+style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>適格機関投資家の全てが投資事業有限責任組合である場合に提出する書面</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='text-align:right'><span style='font-size:
+12.0pt;font-family:"ＭＳ 明朝"'>　年　月　日</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>関東財務局長　殿</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>　　　　　　　　　　届出者　住所又は所在地&nbsp;&nbsp;<output id="guest"></output></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>　　　　　　　　　　　　　　商　　号&nbsp;&nbsp;<output id="guest1"></output></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>　　　　　　　　　　　　　　又は名称&nbsp;&nbsp;</span></p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>　　　　　　　　　　　　　　氏　　名&nbsp;&nbsp;<output id="guest2"></output>　　　　　　　　　　　　　　　　　　印</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>　　　　　　　　　　　　　　　　　　　　（法人にあっては、代表者の役職氏名）</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>　金融商品取引業等に関する内閣府令第<span
+lang=EN-US>238</span>条の２第１項第３号イ又は同項第４号イに規定する書面を提出します。</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>&nbsp;</span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=97 style='width:72.7pt;border:solid windowtext 1.0pt;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>出資対象事業持分の名称</span></p>
+  </td>
+  <td width=139 style='width:104.5pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>適格機関投資家である投資事業有限責任組合の名称</span></p>
+  </td>
+  <td width=191 style='width:142.95pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>投資事業有限責任組合契約に基づき当該投資事業有限責任組合契約の相手方のために運用を行う金銭その他の財産の総額</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>（Ａ）</span></p>
+  </td>
+  <td width=126 style='width:94.2pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>投資事業有限責任組合が行う借入金の額</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>（Ｂ）</span></p>
+  </td>
+  <td width=104 style='width:78.35pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>Ａ－Ｂの額</span></p>
+  </td>
+ </tr>
+ <tr style='height:39.5pt'>
+  <td width=97 style='width:72.7pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt;height:39.5pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"ＭＳ 明朝"'><output id="guest3"></output>&nbsp;</span></p>
+  </td>
+  <td width=139 style='width:104.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt;height:39.5pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"ＭＳ 明朝"'><output id="guest4"></output>&nbsp;</span></p>
+  </td>
+  <td width=191 style='width:142.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt;height:39.5pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-size:12.0pt;font-family:"ＭＳ 明朝"'><output id="guest5"></output>円</span></p>
+  </td>
+  <td width=126 style='width:94.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt;height:39.5pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-size:12.0pt;font-family:"ＭＳ 明朝"'><output id="guest6"></output>円</span></p>
+  </td>
+  <td width=104 style='width:78.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt;height:39.5pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-size:12.0pt;font-family:"ＭＳ 明朝"'><output id="guest7"></output>円</span></p>
+  </td>
+ </tr>
+ <tr style='height:39.5pt'>
+  <td width=97 style='width:72.7pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt;height:39.5pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>&nbsp;</span></p>
+  </td>
+  <td width=139 style='width:104.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt;height:39.5pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>&nbsp;</span></p>
+  </td>
+  <td width=191 style='width:142.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt;height:39.5pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>円</span></p>
+  </td>
+  <td width=126 style='width:94.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt;height:39.5pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>円</span></p>
+  </td>
+  <td width=104 style='width:78.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt;height:39.5pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>円</span></p>
+  </td>
+ </tr>
+ <tr style='height:39.5pt'>
+  <td width=97 style='width:72.7pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt;height:39.5pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>&nbsp;</span></p>
+  </td>
+  <td width=139 style='width:104.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt;height:39.5pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>&nbsp;</span></p>
+  </td>
+  <td width=191 style='width:142.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt;height:39.5pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>円</span></p>
+  </td>
+  <td width=126 style='width:94.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt;height:39.5pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>円</span></p>
+  </td>
+  <td width=104 style='width:78.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt;height:39.5pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>円</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+style='font-size:12.0pt;font-family:"ＭＳ 明朝";color:white'>　※</span><span
+style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>　上記金額の根拠となる資料（投資事業有限責任組合の直近の財務諸表、消費貸借契約書等）を添付すること。</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"ＭＳ 明朝"'>&nbsp;</span></p>
+
+<p class=MsoClosing><span lang=EN-US style='font-family:"ＭＳ 明朝"'>&nbsp;</span></p>
+
+<p class=MsoClosing><span style='font-family:"ＭＳ 明朝"'>以上</span></p>
+
+</form>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
